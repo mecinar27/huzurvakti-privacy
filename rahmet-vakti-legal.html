@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahmet Vakti – Yasal Bilgilendirmeler</title>
+<style>
+  :root {
+    --primary: #2e7d32;
+    --primary-light: #4caf50;
+    --primary-dark: #1b5e20;
+    --bg: #f1f8e9;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text2: #4a4a4a;
+    --text3: #757575;
+    --border: #c8e6c9;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 32px 20px 28px;
+    text-align: center;
+  }
+  header .emoji { font-size: 48px; margin-bottom: 12px; }
+  header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+  header p { font-size: 13px; opacity: 0.85; }
+  nav {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    background: #e8f5e9;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  nav a:hover { background: var(--primary); color: white; }
+  main { max-width: 800px; margin: 0 auto; padding: 24px 16px 48px; }
+  .section {
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .section-header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .section-header h2 { font-size: 16px; font-weight: 700; }
+  .section-header .arrow { font-size: 18px; transition: transform 0.2s; }
+  .section-header.open .arrow { transform: rotate(180deg); }
+  .section-body { padding: 20px; display: none; }
+  .section-body.open { display: block; }
+  h3 { color: var(--primary-dark); font-size: 14px; margin: 18px 0 8px; font-weight: 700; }
+  h4 { color: var(--text2); font-size: 13px; margin: 12px 0 6px; font-weight: 600; }
+  p { margin-bottom: 10px; color: var(--text2); font-size: 14px; }
+  ul { padding-left: 18px; margin-bottom: 10px; }
+  ul li { color: var(--text2); font-size: 14px; margin-bottom: 4px; }
+  .meta {
+    font-size: 12px;
+    color: var(--text3);
+    background: #f9fbe7;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 12px 0;
+  }
+  th {
+    background: #e8f5e9;
+    color: var(--primary-dark);
+    font-weight: 600;
+    padding: 8px 10px;
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+  td {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    color: var(--text2);
+    vertical-align: top;
+  }
+  .contact-box {
+    background: #e8f5e9;
+    border: 1px solid var(--primary-light);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--primary-dark);
+  }
+  .contact-box strong { display: block; margin-bottom: 4px; }
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text3);
+    padding: 24px 16px;
+    border-top: 1px solid var(--border);
+  }
+  .badge {
+    display: inline-block;
+    background: var(--primary-light);
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="emoji">🕌</div>
+  <h1>Rahmet Vakti</h1>
+  <p>Yasal Bilgilendirmeler ve Gizlilik Politikası</p>
+</header>
+
+<nav>
+  <a href="#gizlilik">Gizlilik Politikası</a>
+  <a href="#kvkk">KVKK Aydınlatma</a>
+  <a href="#kullanim">Kullanım Şartları</a>
+  <a href="#takip">Takip Teknolojileri</a>
+  <a href="#ihlal">Veri İhlali</a>
+</nav>
+
+<main>
+
+  <!-- GİZLİLİK POLİTİKASI -->
+  <div class="section" id="gizlilik">
+    <div class="section-header open" onclick="toggle(this)">
+      <h2>🔒 Gizlilik Politikası</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body open">
+      <div class="meta">Son Güncelleme: 23 Nisan 2026 &nbsp;|&nbsp; Yürürlük: 23 Nisan 2026</div>
+
+      <h3>1. Veri Sorumlusu</h3>
+      <p>Rahmet Vakti uygulaması, bağımsız geliştirici <strong>mecinar27</strong> tarafından sunulmaktadır.</p>
+      <div class="contact-box">
+        <strong>İletişim:</strong>
+        E-posta: mecinar27@gmail.com<br>
+        Konum: Gaziantep, Türkiye
+      </div>
+
+      <h3>2. Toplanan Veriler</h3>
+      <h4>2.1. Konum Verisi</h4>
+      <p>Namaz vakitlerinin hesaplanması amacıyla, yalnızca sizin izninizle cihaz konumunuz kullanılır. Konum bilgisi uygulama dışına gönderilmez ve uzak sunucularda saklanmaz; yalnızca cihazınızda anlık hesaplama için kullanılır.</p>
+      <h4>2.2. Yerel Uygulama Verileri</h4>
+      <p>Namaz alarm ayarları, ibadet tercihleri ve uygulama içi seçimler (kıble, takvim, çocuk modu vb.) yalnızca cihazınızda yerel olarak saklanır. Bu verilere uzaktan erişilmez.</p>
+      <h4>2.3. Bildirim İzinleri</h4>
+      <p>Namaz vakti ve özel gün bildirimleri için bildirim izni istenir. Bu izin olmadan alarmlar çalışmaz. Bildirim verileri sunuculara iletilmez.</p>
+      <h4>2.4. Yapay Zeka API Kullanımı</h4>
+      <p>Uygulama, içerik oluşturma özelliklerinde Google Gemini API kullanmaktadır. Bu kapsamda gönderilen metinler Google'ın sunucularında işlenebilir. Google'ın gizlilik politikası için: policies.google.com/privacy</p>
+
+      <h3>3. Kişisel Veri Toplamıyoruz</h3>
+      <p>Rahmet Vakti; kullanıcı hesabı oluşturmaz, e-posta veya kimlik bilgisi toplamaz, sosyal veri işlemez ve reklam göstermez. Uygulama tamamen yerel çalışır.</p>
+
+      <h3>4. Veri Paylaşımı</h3>
+      <p>Kişisel verileriniz hiçbir üçüncü tarafla ticari amaçla paylaşılmaz. Yalnızca namaz vakti hesabı için anonim konum bilgisi cihaz üzerinde işlenir.</p>
+
+      <h3>5. Çocuklar</h3>
+      <p>Rahmet Vakti'nin çocuk modu özelliği mevcuttur. Uygulama, 13 yaş altı çocuklardan kişisel veri toplamaz ve çocukların verilerini özel koruma altında tutar. Uygulama ebeveyn gözetiminde kullanılması önerilir.</p>
+
+      <h3>6. Veri Güvenliği</h3>
+      <p>Tüm veriler cihazınızda şifrelenmiş Android depolama alanında tutulur. Sunucu bağlantısı yalnızca Gemini API çağrıları için gerçekleşir ve HTTPS/TLS ile korunur.</p>
+
+      <h3>7. Haklarınız</h3>
+      <p>Uygulama verilerinizi; Ayarlar → Uygulama Yönetimi → Rahmet Vakti → Veri Temizle yoluyla istediğiniz zaman silebilirsiniz. KVKK kapsamındaki talepler için mecinar27@gmail.com adresine ulaşabilirsiniz.</p>
+
+      <div class="contact-box">
+        Sorularınız için: <strong>mecinar27@gmail.com</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- KVKK -->
+  <div class="section" id="kvkk">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>📋 KVKK Aydınlatma Metni</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">6698 Sayılı Kişisel Verilerin Korunması Kanunu Uyarınca | Son Güncelleme: 23 Nisan 2026</div>
+
+      <h3>Veri Sorumlusu</h3>
+      <p><strong>Unvan:</strong> mecinar27 (Bağımsız Geliştirici)<br>
+      <strong>E-posta:</strong> mecinar27@gmail.com<br>
+      <strong>Konum:</strong> Gaziantep, Türkiye</p>
+
+      <h3>İşlenen Kişisel Veriler</h3>
+      <table>
+        <tr>
+          <th>Veri Kategorisi</th>
+          <th>İşlenen Veriler</th>
+          <th>Hukuki Sebep</th>
+          <th>Saklama Süresi</th>
+        </tr>
+        <tr>
+          <td>Konum Bilgisi</td>
+          <td>Anlık GPS koordinatı (namaz vakti hesabı)</td>
+          <td>Açık Rıza</td>
+          <td>Hesaplama sonrası silinir – saklanmaz</td>
+        </tr>
+        <tr>
+          <td>Yerel Ayarlar</td>
+          <td>Alarm, kıble, tema tercihleri</td>
+          <td>Sözleşmenin İfası</td>
+          <td>Uygulama kaldırılana kadar cihazda</td>
+        </tr>
+        <tr>
+          <td>Bildirim</td>
+          <td>Yerel bildirim planlaması</td>
+          <td>Açık Rıza</td>
+          <td>İzin iptal edilene kadar</td>
+        </tr>
+        <tr>
+          <td>AI API Verisi</td>
+          <td>Kullanıcının girdiği metinler (Gemini API)</td>
+          <td>Meşru Menfaat</td>
+          <td>Google'ın politikasına tabi</td>
+        </tr>
+      </table>
+
+      <h3>KVKK Kapsamındaki Haklarınız</h3>
+      <ul>
+        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+        <li>İşlenmişse bilgi talep etme</li>
+        <li>Yanlış işlenmişse düzeltilmesini isteme</li>
+        <li>Koşullar oluştuğunda silinmesini talep etme</li>
+        <li>İşlemeye itiraz etme</li>
+        <li>Zararın giderilmesini talep etme</li>
+      </ul>
+
+      <h3>Başvuru Yöntemi</h3>
+      <p>Haklarınızı kullanmak için <strong>mecinar27@gmail.com</strong> adresine e-posta gönderebilirsiniz. Başvurularınız 30 gün içinde yanıtlanır, ücretsizdir.</p>
+
+      <h3>Güvenlik Önlemleri</h3>
+      <p>Verileriniz Android'in güvenli depolama alanında tutulur. Sunucu bağlantıları TLS/HTTPS ile şifrelenir. Gereksiz veri toplanmaz (veri minimizasyonu ilkesi uygulanır).</p>
+    </div>
+  </div>
+
+  <!-- KULLANIM ŞARTLARI -->
+  <div class="section" id="kullanim">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>📄 Kullanım Şartları</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+
+      <h3>1. Taraflar ve Kapsam</h3>
+      <p>Bu kullanım şartları, <strong>Rahmet Vakti</strong> uygulamasını sunan mecinar27 (Geliştirici) ile uygulamayı kullanan kişi (Kullanıcı) arasında geçerlidir. Uygulamayı indirerek ve kullanarak bu şartları kabul etmiş sayılırsınız.</p>
+
+      <h3>2. Uygulamanın Amacı</h3>
+      <p>Rahmet Vakti; namaz vakitleri, ezan alarmları, kıble yönü, dua rehberi ve çocuk modu gibi İslami yaşam yardımcısı özellikler sunan ücretsiz bir mobil uygulamadır.</p>
+
+      <h3>3. Kullanım Koşulları</h3>
+      <ul>
+        <li>Uygulama yalnızca kişisel ve ticari olmayan amaçlarla kullanılabilir.</li>
+        <li>Uygulamanın kaynak kodu, tasarımı veya içerikleri kopyalanamaz, dağıtılamaz.</li>
+        <li>Uygulamanın tersine mühendislik ile çözülmesi yasaktır.</li>
+        <li>Uygulama, cihazın konum iznini yalnızca namaz vakti hesabı için kullanır; bu amaç dışında kullanılamaz.</li>
+      </ul>
+
+      <h3>4. Namaz Vakitleri ve Doğruluk</h3>
+      <p>Namaz vakitleri Türkiye Diyanet İşleri Başkanlığı'nın hesaplama yöntemi baz alınarak hesaplanmaktadır. Ancak geliştirici, hesaplamaların mutlak doğruluğunu garanti edemez. Hassas ibadet zamanları için resmi kaynaklara başvurulması tavsiye edilir.</p>
+
+      <h3>5. Yapay Zeka İçerikleri</h3>
+      <p>Uygulama içindeki AI destekli özellikler (dua önerileri, içerik oluşturma vb.) Google Gemini API tarafından üretilir. Bu içerikler dini otorite niteliği taşımaz; yalnızca yardımcı amaçlıdır.</p>
+
+      <h3>6. Sorumluluk Sınırları</h3>
+      <p>Uygulama "olduğu gibi" sunulmaktadır. Teknik arızalar, güncelleme süreçleri veya mücbir sebeplerden kaynaklanan kesintilerden geliştirici sorumlu tutulamaz. Alarm ve bildirimlerin çalışması cihazın pil tasarrufu ve sistem ayarlarına bağlıdır.</p>
+
+      <h3>7. Fikri Mülkiyet</h3>
+      <p>Uygulamadaki tüm tasarım, görsel ve yazılım bileşenleri mecinar27'ye aittir. Quran ses dosyaları ve dini içerikler ilgili açık kaynak lisansları kapsamında kullanılmaktadır.</p>
+
+      <h3>8. Değişiklikler</h3>
+      <p>Bu şartlar gerektiğinde güncellenebilir. Önemli değişiklikler uygulama içi bildirimle duyurulur. Uygulamayı kullanmaya devam etmeniz değişiklikleri kabul ettiğiniz anlamına gelir.</p>
+
+      <h3>9. Uygulanacak Hukuk</h3>
+      <p>Bu şartlar Türk Hukuku'na tabidir. Uyuşmazlıklarda Gaziantep mahkemeleri ve tüketici hakem heyetleri yetkilidir.</p>
+
+      <div class="contact-box">
+        İletişim: <strong>mecinar27@gmail.com</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAKİP TEKNOLOJİLERİ -->
+  <div class="section" id="takip">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>📡 Takip Teknolojileri Politikası</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+
+      <h3>Kullanılan Teknolojiler</h3>
+      <p>Rahmet Vakti, reklam SDK'sı, analitik izleme veya kullanıcı takip teknolojisi kullanmamaktadır. Uygulama içinde reklam gösterilmez.</p>
+
+      <h4>Kullanılan Tek Harici Servis: Google Gemini API</h4>
+      <p>AI özellikler için Google Gemini API kullanılır. API çağrıları sırasında girdiğiniz metin Google'ın sunucularına iletilir. Google'ın bu verileri nasıl işlediği için: <strong>policies.google.com/privacy</strong></p>
+
+      <h3>Yerel Depolama</h3>
+      <p>Uygulama ayarları, alarm verileri ve tercihler Android'in yerel SharedPreferences ve Room veritabanında tutulur. Bu verilere uygulama dışından erişilemez.</p>
+
+      <h3>Konum</h3>
+      <p>Konum izni yalnızca namaz vakti hesabı için kullanılır. Koordinatlar cihaz dışına gönderilmez, sunucuda saklanmaz.</p>
+
+      <h3>Bildirimler</h3>
+      <p>Yerel bildirimler (ezan alarmları) Firebase veya uzak push servisi kullanmadan, doğrudan cihaz üzerinde planlanır.</p>
+
+      <h3>Kontrol ve Tercihler</h3>
+      <ul>
+        <li>Konum izni: Cihaz Ayarları → Uygulama İzinleri → Rahmet Vakti</li>
+        <li>Bildirim izni: Cihaz Ayarları → Bildirimler → Rahmet Vakti</li>
+        <li>Tüm uygulama verisi: Ayarlar → Uygulama Yönetimi → Veri Temizle</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- VERİ İHLALİ -->
+  <div class="section" id="ihlal">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>🛡️ Veri İhlali Bildirimi</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+
+      <h3>Genel Değerlendirme</h3>
+      <p>Rahmet Vakti sunucu tabanlı kullanıcı verisi tutmadığından, geleneksel anlamda veri ihlali riski son derece düşüktür. Uygulama verilerinin tamamı cihazınızda yerel olarak saklanır.</p>
+
+      <h3>Olası İhlal Kaynakları</h3>
+      <ul>
+        <li>Cihazınıza fiziksel yetkisiz erişim</li>
+        <li>Gemini API üzerinden işlenen verilerde Google kaynaklı ihlal</li>
+      </ul>
+
+      <h3>Bildirim Süreci</h3>
+      <p>Bir ihlal tespit edilmesi veya şüphelenilmesi durumunda:</p>
+      <ul>
+        <li>Etkilenen kullanıcılar mümkün olan en kısa sürede e-posta ile bilgilendirilir</li>
+        <li>KVKK'nın öngördüğü süre içinde Kişisel Verileri Koruma Kurumu'na bildirim yapılır</li>
+        <li>İhlale yol açan güvenlik açığı kapatılır ve güncelleme yayınlanır</li>
+      </ul>
+
+      <h3>Güvenlik Bildirimi</h3>
+      <p>Bir güvenlik açığı keşfettiyseniz lütfen aşağıdaki adrese bildirin:</p>
+      <div class="contact-box">
+        <strong>Güvenlik Bildirimi:</strong> mecinar27@gmail.com<br>
+        Konu: Güvenlik Açığı – Rahmet Vakti<br>
+        Beklenen yanıt: 48 saat içinde
+      </div>
+
+      <h3>KVKK İletişim</h3>
+      <div class="contact-box">
+        <strong>Kişisel Verileri Koruma Kurumu</strong><br>
+        Necatibey Cad. No:114 Sıhhiye/Çankaya/ANKARA<br>
+        Tel: +90 312 967 88 00 | Web: www.kvkk.gov.tr
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 mecinar27. Tüm hakları saklıdır.</p>
+  <p style="margin-top:6px">Bu belgeler Rahmet Vakti uygulaması için geçerlidir.</p>
+  <p style="margin-top:6px">İletişim: mecinar27@gmail.com</p>
+</footer>
+
+<script>
+  function toggle(header) {
+    header.classList.toggle('open');
+    const body = header.nextElementSibling;
+    body.classList.toggle('open');
+  }
+  // İlk section açık gelsin
+  document.querySelectorAll('.section-body').forEach((b, i) => {
+    if (i === 0) b.classList.add('open');
+  });
+</script>
+</body>
+</html>
