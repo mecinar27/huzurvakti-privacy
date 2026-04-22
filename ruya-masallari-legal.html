@@ -199,10 +199,17 @@
       <p>Uygulama çocuklara yönelik olup 13 yaş altı kullanıcıların kişisel verilerini bilinçli olarak toplamaz. Ebeveyn veya vasi masal oluşturma sırasında çocuğun gerçek adı veya kişisel bilgilerini girmemeye özen göstermelidir. Bu tür bilgilerin girilmesi halinde Gemini API'ye iletilecektir.</p>
 
       <h3>4. Veri Paylaşımı</h3>
-      <p>Kişisel verileriniz hiçbir üçüncü tarafla ticari amaçla paylaşılmaz, satılmaz veya kiralanmaz. Harici API servisleri yalnızca içerik üretimi amacıyla kullanılır.</p>
+      <p>Kişisel verileriniz hiçbir üçüncü tarafla ticari amaçla paylaşılmaz, satılmaz veya kiralanmaz. Harici API servisleri yalnızca içerik üretimi ve reklam gösterimi amacıyla kullanılır.</p>
 
-      <h3>5. Reklam</h3>
-      <p>Rüya Masalları reklam içermez ve reklam SDK'sı kullanmaz.</p>
+      <h3>5. Reklam Sistemi</h3>
+      <p>Rüya Masalları, <strong>ödüllü reklam</strong> (rewarded ad) modeli kullanmaktadır:</p>
+      <ul>
+        <li>Her kullanıcıya başlangıçta <strong>2 ücretsiz masal hakkı</strong> tanınır.</li>
+        <li>Ücretsiz hak tükendikten sonra isteğe bağlı reklam izlenerek <strong>ek masal hakkı</strong> kazanılabilir.</li>
+        <li><strong>Masal Kütüphanesi</strong> bölümünde hazır masalları okumak için reklam izlenmesi gerekebilir.</li>
+        <li>Reklamlar yalnızca kullanıcının isteğiyle başlatılır; zorunlu reklam gösterimi yapılmaz.</li>
+      </ul>
+      <p>Reklamlar Google AdMob altyapısı üzerinden sunulmaktadır. AdMob, reklamları kişiselleştirmek amacıyla reklam kimliği (Advertising ID) kullanabilir. Bu tercihi Android cihazınızın Ayarlar → Google → Reklamlar bölümünden yönetebilirsiniz.</p>
 
       <h3>6. Veri Güvenliği</h3>
       <p>Yerel veriler Android'in güvenli depolama alanında saklanır. API bağlantıları HTTPS/TLS ile şifrelenerek iletilir.</p>
@@ -257,10 +264,16 @@
           <td>Pollinations.ai politikasına tabi</td>
         </tr>
         <tr>
-          <td>Bildirim Planı</td>
-          <td>Yerel bildirim zamanlaması</td>
-          <td>Açık Rıza</td>
-          <td>İzin iptal edilene kadar cihazda</td>
+          <td>Reklam Verisi</td>
+          <td>Reklam kimliği (Advertising ID), reklam etkileşim verisi (AdMob)</td>
+          <td>Meşru Menfaat / Açık Rıza</td>
+          <td>Google AdMob politikasına tabi</td>
+        </tr>
+        <tr>
+          <td>Masal Hakkı</td>
+          <td>Ücretsiz hak sayacı (yerel)</td>
+          <td>Sözleşmenin İfası</td>
+          <td>Cihazda – uygulama kaldırılana kadar</td>
         </tr>
       </table>
 
@@ -350,9 +363,12 @@
       <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
 
       <h3>Kullanılan Teknolojiler</h3>
-      <p>Rüya Masalları reklam SDK'sı, analitik izleme veya kullanıcı takip teknolojisi kullanmaz. Uygulama içinde reklam gösterilmez.</p>
+      <p>Rüya Masalları ödüllü reklam sistemi için <strong>Google AdMob SDK</strong> kullanmaktadır. Analitik izleme veya kullanıcı profilleme amacıyla başka bir SDK kullanılmaz.</p>
 
-      <h4>Harici Servis 1: Google Gemini API</h4>
+      <h4>Harici Servis 1: Google AdMob</h4>
+      <p>Ödüllü reklamların gösterimi için kullanılır. AdMob, reklam kişiselleştirmesi amacıyla cihazın Advertising ID'sini kullanabilir. Kullanıcı reklamı izlemeden önce reklam başlamaz (isteğe bağlı). Kişiselleştirilmiş reklam tercihleri: Ayarlar → Google → Reklamlar.</p>
+
+      <h4>Harici Servis 2: Google Gemini API</h4>
       <p>Masal metni üretimi için kullanılır. Seçilen tema, yaş grubu ve karakter adı Google sunucularına iletilir.</p>
 
       <h4>Harici Servis 2: Pollinations.ai</h4>

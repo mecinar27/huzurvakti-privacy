@@ -191,13 +191,22 @@
       <h3>3. Veri Paylaşımı</h3>
       <p>Kişisel verileriniz hiçbir üçüncü tarafla paylaşılmaz, satılmaz veya kiralanmaz. Gemini API'ye gönderilen içerikler yalnızca AI işleme amaçlıdır ve Google'ın veri işleme politikasına tabidir.</p>
 
-      <h3>4. Reklam</h3>
-      <p>YKS Koç reklam içermez, reklam SDK'sı kullanmaz ve kullanıcı davranışlarını reklam amaçlı izlemez.</p>
+      <h3>4. Reklam Sistemi</h3>
+      <p>YKS Koç, <strong>ödüllü reklam</strong> (rewarded ad) modeli kullanmaktadır. Reklamlar yalnızca kullanıcının isteğiyle başlatılır; zorunlu reklam gösterimi yapılmaz.</p>
+      <ul>
+        <li>Belirli özellikler veya ek haklar için isteğe bağlı reklam izlenebilir.</li>
+        <li>Reklamlar Google AdMob altyapısı üzerinden sunulmaktadır.</li>
+        <li>AdMob, reklamları kişiselleştirmek amacıyla reklam kimliği (Advertising ID) kullanabilir.</li>
+        <li>Reklam tercihlerinizi Android cihazınızın Ayarlar → Google → Reklamlar bölümünden yönetebilirsiniz.</li>
+      </ul>
 
-      <h3>5. Veri Güvenliği</h3>
+      <h3>5. Veri Paylaşımı</h3>
+      <p>Kişisel verileriniz hiçbir üçüncü tarafla ticari amaçla paylaşılmaz. Gemini API ve AdMob servisleri yalnızca uygulama işlevleri için kullanılır.</p>
+
+      <h3>6. Veri Güvenliği</h3>
       <p>Tüm yerel veriler Android'in güvenli depolama alanında saklanır. API çağrıları HTTPS/TLS ile şifrelenerek iletilir.</p>
 
-      <h3>6. Haklarınız</h3>
+      <h3>7. Haklarınız</h3>
       <p>Uygulama verilerinizi Ayarlar → Uygulama Yönetimi → YKS Koç → Veri Temizle yoluyla silebilirsiniz. KVKK talepleriniz için mecinar27@gmail.com adresine başvurabilirsiniz. Başvurular 30 gün içinde yanıtlanır.</p>
 
       <div class="contact-box">
@@ -245,6 +254,12 @@
           <td>Kullanıcının kendi Gemini API anahtarı</td>
           <td>Sözleşmenin İfası</td>
           <td>Cihazda şifreli – kullanıcı silinceye kadar</td>
+        </tr>
+        <tr>
+          <td>Reklam Verisi</td>
+          <td>Reklam kimliği (Advertising ID), etkileşim verisi (AdMob)</td>
+          <td>Meşru Menfaat / Açık Rıza</td>
+          <td>Google AdMob politikasına tabi</td>
         </tr>
       </table>
 
@@ -321,9 +336,12 @@
       <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
 
       <h3>Kullanılan Teknolojiler</h3>
-      <p>YKS Koç herhangi bir reklam SDK'sı, analitik izleme aracı veya kullanıcı takip teknolojisi kullanmaz. Uygulama içinde reklam gösterilmez.</p>
+      <p>YKS Koç, ödüllü reklam sistemi için <strong>Google AdMob SDK</strong> kullanmaktadır. Analitik izleme veya kullanıcı profilleme amacıyla başka bir SDK kullanılmaz.</p>
 
-      <h4>Harici Servis: Google Gemini API</h4>
+      <h4>Harici Servis 1: Google AdMob</h4>
+      <p>Ödüllü reklamların gösterimi için kullanılır. AdMob, reklam kişiselleştirmesi amacıyla cihazın Advertising ID'sini kullanabilir. Reklamlar yalnızca kullanıcının isteğiyle başlatılır. Tercih yönetimi: Ayarlar → Google → Reklamlar.</p>
+
+      <h4>Harici Servis 2: Google Gemini API</h4>
       <p>OCR ve AI koçluk özellikleri için Gemini API kullanılır. API çağrıları sırasında görüntü ve metin içerikleri Google sunucularına iletilir. İşleme süreci Google'ın gizlilik politikasına tabidir.</p>
 
       <h3>Yerel Depolama</h3>
