@@ -168,7 +168,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body open">
-      <div class="meta">Son Güncelleme: 23 Nisan 2026 &nbsp;|&nbsp; Yürürlük: 23 Nisan 2026</div>
+      <div class="meta">Son Güncelleme: 22 Ekim 2026 &nbsp;|&nbsp; Yürürlük: 22 Ekim 2026</div>
 
       <h3>1. Veri Sorumlusu</h3>
       <p>Rahmet Vakti uygulaması, bağımsız geliştirici <strong>mecinar27</strong> tarafından sunulmaktadır.</p>
@@ -178,30 +178,59 @@
         Konum: Gaziantep, Türkiye
       </div>
 
-      <h3>2. Toplanan Veriler</h3>
-      <h4>2.1. Konum Verisi</h4>
-      <p>Namaz vakitlerinin hesaplanması amacıyla, yalnızca sizin izninizle cihaz konumunuz kullanılır. Konum bilgisi uygulama dışına gönderilmez ve uzak sunucularda saklanmaz; yalnızca cihazınızda anlık hesaplama için kullanılır.</p>
-      <h4>2.2. Yerel Uygulama Verileri</h4>
-      <p>Namaz alarm ayarları, ibadet tercihleri ve uygulama içi seçimler (kıble, takvim, çocuk modu vb.) yalnızca cihazınızda yerel olarak saklanır. Bu verilere uzaktan erişilmez.</p>
-      <h4>2.3. Bildirim İzinleri</h4>
-      <p>Namaz vakti ve özel gün bildirimleri için bildirim izni istenir. Bu izin olmadan alarmlar çalışmaz. Bildirim verileri sunuculara iletilmez.</p>
-      <h4>2.4. Yapay Zeka API Kullanımı</h4>
-      <p>Uygulama, içerik oluşturma özelliklerinde Google Gemini API kullanmaktadır. Bu kapsamda gönderilen metinler Google'ın sunucularında işlenebilir. Google'ın gizlilik politikası için: policies.google.com/privacy</p>
+      <h3>2. Hangi Verileri İşliyoruz?</h3>
+      <p>Rahmet Vakti'de kullanıcı hesabı yoktur; e-posta, telefon numarası veya şifre istenmez. Reklam gösterilmez, reklam kimliği toplanmaz ve hiçbir veri satılmaz. İşlenen veriler ve amaçları aşağıdadır.</p>
 
-      <h3>3. Kişisel Veri Toplamıyoruz</h3>
-      <p>Rahmet Vakti; kullanıcı hesabı oluşturmaz, e-posta veya kimlik bilgisi toplamaz, sosyal veri işlemez ve reklam göstermez. Uygulama tamamen yerel çalışır.</p>
+      <h4>2.1. Konum</h4>
+      <p><strong>Namaz vakti ve kıble:</strong> Yalnızca sizin izninizle cihaz konumunuz kullanılır. Namaz vakitleri ve kıble yönü cihazınızda hesaplanır; bu hesaplama için konum dışarı gönderilmez. İsterseniz konum izni vermeden şehri elle seçebilirsiniz.</p>
+      <p><strong>Şehir adı ve yakındaki camiler:</strong> Uygulama açıkken bulunduğunuz yerin adını göstermek için koordinatlarınız OpenStreetMap'in adres hizmetine (Nominatim), "Yakındaki Camiler" ekranında ise OpenStreetMap Overpass hizmetine gönderilir. Bu istekler anlık işlenir; geliştirici tarafından saklanmaz ve hesap veya kimlik bilgisi içermez.</p>
+      <p><strong>Arka planda konum (isteğe bağlı):</strong> "Uygulama kapalıyken de güncelle" seçeneğini açar ve "Her zaman izin ver" iznini verirseniz, uygulama kapalıyken veya kullanılmıyorken de konumunuz birkaç saatte bir kontrol edilir. Başka bir şehre veya ülkeye geçtiğinizde namaz vakitleri, ezan alarmları, kalıcı vakit bildirimi ve ana ekran aracı yeni konuma göre güncellenir. Arka planda alınan konum <strong>cihazınızdan dışarı gönderilmez</strong>; şehir adı uygulamanın içindeki il listesinden bulunur. Pil tasarrufu için GPS yerine ağ/Wi-Fi konumu tercih edilir. Bu özelliği uygulama ayarlarından kapatabilir, izni telefonunuzun ayarlarından istediğiniz zaman kaldırabilirsiniz.</p>
 
-      <h3>4. Veri Paylaşımı</h3>
-      <p>Kişisel verileriniz hiçbir üçüncü tarafla ticari amaçla paylaşılmaz. Yalnızca namaz vakti hesabı için anonim konum bilgisi cihaz üzerinde işlenir.</p>
+      <h4>2.2. Kardeşlik (Topluluk) Paylaşımları — İsteğe Bağlı</h4>
+      <p>"Kardeşlik" bölümünde dua, hatim veya zikir paylaştığınızda ya da yorum yazdığınızda; yazdığınız ad (gerçek adınız olmak zorunda değildir), paylaşım metni, tarih ve cihazınızda üretilen rastgele bir kullanıcı kimliği Google Firebase (Cloud Firestore) üzerinde saklanır ve diğer kullanıcılara gösterilir. Bu bölümü kullanmazsanız bu veriler hiç oluşmaz. Kendi paylaşımlarınızı ve yorumlarınızı uygulama içinden 🗑 simgesiyle silebilirsiniz; diğer silme talepleriniz için mecinar27@gmail.com adresine yazabilirsiniz.</p>
+
+      <h4>2.3. Çökme Raporları ve Kullanım İstatistikleri</h4>
+      <p>Uygulamanın kararlılığını ve kalitesini artırmak için Google Firebase hizmetleri kullanılır:</p>
+      <ul>
+        <li><strong>Firebase Crashlytics:</strong> Uygulama çöktüğünde veya hata oluştuğunda; hata kaydı, cihaz modeli, Android ve uygulama sürümü ile bir kurulum kimliği.</li>
+        <li><strong>Firebase Analytics:</strong> Hangi ekranların ve özelliklerin kullanıldığına dair genel etkileşim bilgileri, uygulama örnek kimliği ve cihaz bilgileri.</li>
+      </ul>
+      <p>Bu veriler yalnızca analiz ve hata giderme amacıyla kullanılır; reklam, profilleme veya satış amacıyla kullanılmaz. Reklam kimliği toplama özelliği kapatılmıştır. Google'ın bu verileri nasıl işlediği için: policies.google.com/privacy ve firebase.google.com/support/privacy</p>
+
+      <h4>2.4. Cihazda Kalan Veriler</h4>
+      <p>Namaz alarm ayarları, kılınan namaz kayıtları, zikir sayıları, favori dualar, notlar, ses tercihleri ve diğer uygulama içi seçimler yalnızca cihazınızda saklanır ve dışarı gönderilmez.</p>
+
+      <h4>2.5. Kamera</h4>
+      <p>Kamera izni yalnızca "AR Kıble" ekranında, kamera görüntüsü üzerinde Kâbe yönünü göstermek için kullanılır. Görüntü kaydedilmez ve dışarı gönderilmez.</p>
+
+      <h4>2.6. Bildirimler</h4>
+      <p>Namaz vakti, sahur ve özel gün bildirimleri için bildirim izni istenir. Bildirimler cihaz üzerinde planlanır; bildirim içerikleri sunuculara iletilmez.</p>
+
+      <h4>2.7. Ses ve İçerik Sunucuları</h4>
+      <p>Kur'an tilaveti, meal ve dua seslerini dinlediğinizde veya Kur'an'ı indirdiğinizde dosyalar ilgili sunuculardan indirilir: api.alquran.cloud, cdn.islamic.network, everyayah.com ve hisnmuslim.com. Bu isteklerde yalnızca istenen dosyanın adresi bulunur; hesap, konum veya kimlik bilgisi gönderilmez. Zikir, dua ve meal seslendirmesi telefonunuzun kendi ses motoruyla cihazda yapılır.</p>
+
+      <h3>3. Veri Paylaşımı</h3>
+      <p>Verileriniz satılmaz ve reklam amacıyla üçüncü taraflarla paylaşılmaz. Yukarıda belirtilen hizmet sağlayıcılar (Google Firebase, OpenStreetMap) verileri yalnızca uygulamanın çalışması için ve kendi gizlilik politikalarına uygun olarak işler. Kardeşlik bölümündeki paylaşımlar, sizin tercihinizle diğer kullanıcılara gösterilir.</p>
+
+      <h3>4. Saklama Süresi</h3>
+      <ul>
+        <li>Konum: Cihazda son bilinen konum olarak tutulur; şehir adı ve cami sorguları anlık işlenir.</li>
+        <li>Kardeşlik paylaşımları: Siz silene kadar veya silme talebinize kadar.</li>
+        <li>Crashlytics ve Analytics verileri: Google Firebase'in saklama süreleri kapsamında (en fazla 14 ay).</li>
+        <li>Cihazdaki veriler: Uygulamayı silene veya verilerini temizleyene kadar.</li>
+      </ul>
 
       <h3>5. Çocuklar</h3>
-      <p>Rahmet Vakti'nin çocuk modu özelliği mevcuttur. Uygulama, 13 yaş altı çocuklardan kişisel veri toplamaz ve çocukların verilerini özel koruma altında tutar. Uygulama ebeveyn gözetiminde kullanılması önerilir.</p>
+      <p>Uygulamada çocuklara yönelik içerikler (çocuk bölümü, hikâyeler) bulunur. Uygulama çocuklardan bilerek kişisel veri toplamaz; Kardeşlik bölümünün ebeveyn gözetiminde kullanılması önerilir.</p>
 
       <h3>6. Veri Güvenliği</h3>
-      <p>Tüm veriler cihazınızda şifrelenmiş Android depolama alanında tutulur. Sunucu bağlantısı yalnızca Gemini API çağrıları için gerçekleşir ve HTTPS/TLS ile korunur.</p>
+      <p>Uygulamanın tüm sunucu bağlantıları HTTPS/TLS ile şifrelenir. Cihazdaki veriler Android'in uygulamaya özel güvenli depolama alanında tutulur.</p>
 
       <h3>7. Haklarınız</h3>
-      <p>Uygulama verilerinizi; Ayarlar → Uygulama Yönetimi → Rahmet Vakti → Veri Temizle yoluyla istediğiniz zaman silebilirsiniz. KVKK kapsamındaki talepler için mecinar27@gmail.com adresine ulaşabilirsiniz.</p>
+      <p>Cihazdaki tüm uygulama verilerini Ayarlar → Uygulamalar → Rahmet Vakti → Depolama → Verileri temizle yoluyla silebilirsiniz. Kardeşlik paylaşımlarınızı uygulama içinden silebilirsiniz. Erişim, düzeltme, silme ve KVKK kapsamındaki diğer talepleriniz için mecinar27@gmail.com adresine yazabilirsiniz.</p>
+
+      <h3>8. Değişiklikler</h3>
+      <p>Bu politika uygulamadaki değişikliklere göre güncellenebilir; güncel sürüm her zaman bu sayfada yayımlanır.</p>
 
       <div class="contact-box">
         Sorularınız için: <strong>mecinar27@gmail.com</strong>
@@ -216,7 +245,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">6698 Sayılı Kişisel Verilerin Korunması Kanunu Uyarınca | Son Güncelleme: 23 Nisan 2026</div>
+      <div class="meta">6698 Sayılı Kişisel Verilerin Korunması Kanunu Uyarınca | Son Güncelleme: 22 Ekim 2026</div>
 
       <h3>Veri Sorumlusu</h3>
       <p><strong>Unvan:</strong> mecinar27 (Bağımsız Geliştirici)<br>
@@ -228,34 +257,37 @@
         <tr>
           <th>Veri Kategorisi</th>
           <th>İşlenen Veriler</th>
-          <th>Hukuki Sebep</th>
+          <th>Amaç ve Hukuki Sebep</th>
           <th>Saklama Süresi</th>
         </tr>
         <tr>
-          <td>Konum Bilgisi</td>
-          <td>Anlık GPS koordinatı (namaz vakti hesabı)</td>
-          <td>Açık Rıza</td>
-          <td>Hesaplama sonrası silinir – saklanmaz</td>
+          <td>Konum</td>
+          <td>Cihaz konumu (namaz vakti, kıble); şehir adı ve yakın camiler için anlık koordinat sorgusu</td>
+          <td>Hizmetin sunulması — Açık rıza (konum izni)</td>
+          <td>Sorgular anlık işlenir; son konum yalnızca cihazda</td>
         </tr>
         <tr>
-          <td>Yerel Ayarlar</td>
-          <td>Alarm, kıble, tema tercihleri</td>
-          <td>Sözleşmenin İfası</td>
-          <td>Uygulama kaldırılana kadar cihazda</td>
+          <td>Kardeşlik paylaşımları</td>
+          <td>Kullanıcının yazdığı ad, paylaşım ve yorum metni, rastgele kullanıcı kimliği</td>
+          <td>Topluluk özelliğinin sunulması — Açık rıza (paylaşım yapılması)</td>
+          <td>Kullanıcı silene veya talep edene kadar</td>
         </tr>
         <tr>
-          <td>Bildirim</td>
-          <td>Yerel bildirim planlaması</td>
-          <td>Açık Rıza</td>
-          <td>İzin iptal edilene kadar</td>
+          <td>Teknik veriler</td>
+          <td>Çökme kayıtları, cihaz modeli, sistem ve uygulama sürümü, kurulum/örnek kimliği, kullanım etkileşimleri</td>
+          <td>Hata giderme ve hizmetin iyileştirilmesi — Meşru menfaat</td>
+          <td>Google Firebase saklama süreleri kapsamında</td>
         </tr>
         <tr>
-          <td>AI API Verisi</td>
-          <td>Kullanıcının girdiği metinler (Gemini API)</td>
-          <td>Meşru Menfaat</td>
-          <td>Google'ın politikasına tabi</td>
+          <td>Cihazdaki tercihler</td>
+          <td>Alarm, namaz kaydı, zikir, favori, tema ve ses tercihleri</td>
+          <td>Hizmetin sunulması — Sözleşmenin ifası</td>
+          <td>Yalnızca cihazda, uygulama silinene kadar</td>
         </tr>
       </table>
+
+      <h3>Aktarım</h3>
+      <p>Kişisel veriler, hizmetin sunulması amacıyla yurt dışında bulunan hizmet sağlayıcılara (Google Firebase, OpenStreetMap) aktarılabilir. Veriler satılmaz ve reklam amacıyla paylaşılmaz.</p>
 
       <h3>KVKK Kapsamındaki Haklarınız</h3>
       <ul>
@@ -268,10 +300,10 @@
       </ul>
 
       <h3>Başvuru Yöntemi</h3>
-      <p>Haklarınızı kullanmak için <strong>mecinar27@gmail.com</strong> adresine e-posta gönderebilirsiniz. Başvurularınız 30 gün içinde yanıtlanır, ücretsizdir.</p>
+      <p>Haklarınızı kullanmak için <strong>mecinar27@gmail.com</strong> adresine e-posta gönderebilirsiniz. Başvurularınız en geç 30 gün içinde ücretsiz olarak yanıtlanır.</p>
 
       <h3>Güvenlik Önlemleri</h3>
-      <p>Verileriniz Android'in güvenli depolama alanında tutulur. Sunucu bağlantıları TLS/HTTPS ile şifrelenir. Gereksiz veri toplanmaz (veri minimizasyonu ilkesi uygulanır).</p>
+      <p>Sunucu bağlantıları TLS/HTTPS ile şifrelenir. Yalnızca hizmet için gerekli veriler işlenir (veri minimizasyonu ilkesi).</p>
     </div>
   </div>
 
@@ -282,36 +314,36 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+      <div class="meta">Son Güncelleme: 22 Ekim 2026</div>
 
       <h3>1. Taraflar ve Kapsam</h3>
       <p>Bu kullanım şartları, <strong>Rahmet Vakti</strong> uygulamasını sunan mecinar27 (Geliştirici) ile uygulamayı kullanan kişi (Kullanıcı) arasında geçerlidir. Uygulamayı indirerek ve kullanarak bu şartları kabul etmiş sayılırsınız.</p>
 
       <h3>2. Uygulamanın Amacı</h3>
-      <p>Rahmet Vakti; namaz vakitleri, ezan alarmları, kıble yönü, dua rehberi ve çocuk modu gibi İslami yaşam yardımcısı özellikler sunan ücretsiz bir mobil uygulamadır.</p>
+      <p>Rahmet Vakti; namaz vakitleri, ezan alarmları, kıble yönü, Kur'an-ı Kerîm, dua ve zikir kitaplığı, ilmihal ve çocuk bölümü gibi İslami yaşam yardımcısı özellikler sunan ücretsiz bir mobil uygulamadır.</p>
 
       <h3>3. Kullanım Koşulları</h3>
       <ul>
         <li>Uygulama yalnızca kişisel ve ticari olmayan amaçlarla kullanılabilir.</li>
-        <li>Uygulamanın kaynak kodu, tasarımı veya içerikleri kopyalanamaz, dağıtılamaz.</li>
+        <li>Uygulamanın kaynak kodu, tasarımı veya içerikleri izinsiz kopyalanamaz, dağıtılamaz.</li>
         <li>Uygulamanın tersine mühendislik ile çözülmesi yasaktır.</li>
-        <li>Uygulama, cihazın konum iznini yalnızca namaz vakti hesabı için kullanır; bu amaç dışında kullanılamaz.</li>
+        <li>Kardeşlik bölümünde hakaret, nefret söylemi, kişisel bilgi, reklam veya dini değerlere aykırı içerik paylaşılamaz; bu tür içerikler uyarı yapılmaksızın kaldırılabilir.</li>
       </ul>
 
       <h3>4. Namaz Vakitleri ve Doğruluk</h3>
-      <p>Namaz vakitleri Türkiye Diyanet İşleri Başkanlığı'nın hesaplama yöntemi baz alınarak hesaplanmaktadır. Ancak geliştirici, hesaplamaların mutlak doğruluğunu garanti edemez. Hassas ibadet zamanları için resmi kaynaklara başvurulması tavsiye edilir.</p>
+      <p>Namaz vakitleri Türkiye Diyanet İşleri Başkanlığı'nın hesaplama yöntemi esas alınarak hesaplanır. Geliştirici, hesaplamaların her koşulda mutlak doğruluğunu garanti edemez; hassas ibadet zamanları için resmî kaynaklara da başvurulması tavsiye edilir.</p>
 
-      <h3>5. Yapay Zeka İçerikleri</h3>
-      <p>Uygulama içindeki AI destekli özellikler (dua önerileri, içerik oluşturma vb.) Google Gemini API tarafından üretilir. Bu içerikler dini otorite niteliği taşımaz; yalnızca yardımcı amaçlıdır.</p>
+      <h3>5. Dini İçerikler</h3>
+      <p>Dua, zikir ve ayet metinleri Kur'an-ı Kerîm, Kütüb-i Sitte ve Hısnü'l-Müslim gibi kaynaklardan alınmış ve her duanın kaynağı belirtilmiştir. Okunuş, meal ve açıklamalar yardımcı amaçlıdır; dini konularda yetkili kurum ve âlimlere danışılması tavsiye edilir.</p>
 
       <h3>6. Sorumluluk Sınırları</h3>
       <p>Uygulama "olduğu gibi" sunulmaktadır. Teknik arızalar, güncelleme süreçleri veya mücbir sebeplerden kaynaklanan kesintilerden geliştirici sorumlu tutulamaz. Alarm ve bildirimlerin çalışması cihazın pil tasarrufu ve sistem ayarlarına bağlıdır.</p>
 
       <h3>7. Fikri Mülkiyet</h3>
-      <p>Uygulamadaki tüm tasarım, görsel ve yazılım bileşenleri mecinar27'ye aittir. Quran ses dosyaları ve dini içerikler ilgili açık kaynak lisansları kapsamında kullanılmaktadır.</p>
+      <p>Uygulamadaki tasarım, görsel ve yazılım bileşenleri mecinar27'ye aittir. Kur'an ses dosyaları ve dini içerikler ilgili kaynakların kullanım koşulları kapsamında kullanılmaktadır.</p>
 
       <h3>8. Değişiklikler</h3>
-      <p>Bu şartlar gerektiğinde güncellenebilir. Önemli değişiklikler uygulama içi bildirimle duyurulur. Uygulamayı kullanmaya devam etmeniz değişiklikleri kabul ettiğiniz anlamına gelir.</p>
+      <p>Bu şartlar gerektiğinde güncellenebilir. Uygulamayı kullanmaya devam etmeniz güncel şartları kabul ettiğiniz anlamına gelir.</p>
 
       <h3>9. Uygulanacak Hukuk</h3>
       <p>Bu şartlar Türk Hukuku'na tabidir. Uyuşmazlıklarda Gaziantep mahkemeleri ve tüketici hakem heyetleri yetkilidir.</p>
@@ -329,28 +361,33 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+      <div class="meta">Son Güncelleme: 22 Ekim 2026</div>
 
       <h3>Kullanılan Teknolojiler</h3>
-      <p>Rahmet Vakti, reklam SDK'sı, analitik izleme veya kullanıcı takip teknolojisi kullanmamaktadır. Uygulama içinde reklam gösterilmez.</p>
-
-      <h4>Kullanılan Tek Harici Servis: Google Gemini API</h4>
-      <p>AI özellikler için Google Gemini API kullanılır. API çağrıları sırasında girdiğiniz metin Google'ın sunucularına iletilir. Google'ın bu verileri nasıl işlediği için: <strong>policies.google.com/privacy</strong></p>
+      <p>Rahmet Vakti reklam SDK'sı kullanmaz ve reklam göstermez. Reklam kimliği toplama özelliği kapatılmıştır. Uygulamada kullanılan harici hizmetler:</p>
+      <ul>
+        <li><strong>Firebase Crashlytics:</strong> Çökme ve hata raporları</li>
+        <li><strong>Firebase Analytics:</strong> Genel kullanım istatistikleri (reklam ve profilleme amacı olmadan)</li>
+        <li><strong>Firebase Cloud Firestore:</strong> Yalnızca Kardeşlik bölümündeki paylaşımlar</li>
+        <li><strong>OpenStreetMap (Nominatim, Overpass):</strong> Şehir adı ve yakındaki camiler</li>
+        <li><strong>Kur'an ve dua ses sunucuları:</strong> api.alquran.cloud, cdn.islamic.network, everyayah.com, hisnmuslim.com</li>
+      </ul>
 
       <h3>Yerel Depolama</h3>
-      <p>Uygulama ayarları, alarm verileri ve tercihler Android'in yerel SharedPreferences ve Room veritabanında tutulur. Bu verilere uygulama dışından erişilemez.</p>
+      <p>Uygulama ayarları, alarm verileri ve tercihler cihazın uygulamaya özel depolama alanında tutulur. Bu verilere uygulama dışından erişilemez.</p>
 
       <h3>Konum</h3>
-      <p>Konum izni yalnızca namaz vakti hesabı için kullanılır. Koordinatlar cihaz dışına gönderilmez, sunucuda saklanmaz.</p>
+      <p>Konum izni namaz vakti, kıble ve yakındaki camiler için kullanılır. Uygulama açıkken şehir adı ve cami araması için koordinatlar OpenStreetMap hizmetlerine gönderilir; arka planda alınan konum (isteğe bağlı "Her zaman izin ver") cihazdan çıkmaz.</p>
 
       <h3>Bildirimler</h3>
-      <p>Yerel bildirimler (ezan alarmları) Firebase veya uzak push servisi kullanmadan, doğrudan cihaz üzerinde planlanır.</p>
+      <p>Ezan alarmları ve bildirimler uzak bir bildirim servisi kullanılmadan doğrudan cihaz üzerinde planlanır.</p>
 
       <h3>Kontrol ve Tercihler</h3>
       <ul>
-        <li>Konum izni: Cihaz Ayarları → Uygulama İzinleri → Rahmet Vakti</li>
-        <li>Bildirim izni: Cihaz Ayarları → Bildirimler → Rahmet Vakti</li>
-        <li>Tüm uygulama verisi: Ayarlar → Uygulama Yönetimi → Veri Temizle</li>
+        <li>Konum izni: Telefon Ayarları → Uygulamalar → Rahmet Vakti → İzinler</li>
+        <li>Arka planda konum: Uygulama → Ayarlar → Konum kartı</li>
+        <li>Bildirim izni: Telefon Ayarları → Bildirimler → Rahmet Vakti</li>
+        <li>Tüm uygulama verisi: Telefon Ayarları → Uygulamalar → Rahmet Vakti → Depolama → Verileri temizle</li>
       </ul>
     </div>
   </div>
@@ -362,21 +399,21 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+      <div class="meta">Son Güncelleme: 22 Ekim 2026</div>
 
       <h3>Genel Değerlendirme</h3>
-      <p>Rahmet Vakti sunucu tabanlı kullanıcı verisi tutmadığından, geleneksel anlamda veri ihlali riski son derece düşüktür. Uygulama verilerinin tamamı cihazınızda yerel olarak saklanır.</p>
+      <p>Rahmet Vakti'deki verilerin büyük bölümü yalnızca cihazınızda saklanır. Sunucuda tutulan veriler, Kardeşlik bölümündeki isteğe bağlı paylaşımlar ile Firebase üzerindeki teknik verilerden ibarettir.</p>
 
       <h3>Olası İhlal Kaynakları</h3>
       <ul>
         <li>Cihazınıza fiziksel yetkisiz erişim</li>
-        <li>Gemini API üzerinden işlenen verilerde Google kaynaklı ihlal</li>
+        <li>Google Firebase gibi hizmet sağlayıcılarda yaşanabilecek güvenlik olayları</li>
       </ul>
 
       <h3>Bildirim Süreci</h3>
       <p>Bir ihlal tespit edilmesi veya şüphelenilmesi durumunda:</p>
       <ul>
-        <li>Etkilenen kullanıcılar mümkün olan en kısa sürede e-posta ile bilgilendirilir</li>
+        <li>Etkilenen kullanıcılar uygulama içinden ve mümkün olan en kısa sürede bilgilendirilir</li>
         <li>KVKK'nın öngördüğü süre içinde Kişisel Verileri Koruma Kurumu'na bildirim yapılır</li>
         <li>İhlale yol açan güvenlik açığı kapatılır ve güncelleme yayınlanır</li>
       </ul>
